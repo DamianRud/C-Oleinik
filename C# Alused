@@ -72,3 +72,91 @@ namespace NaidisTar1
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sing System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq.Expressions;
+using System.Text;
+
+namespace NaidisTar1
+{
+    public class EsimineOsaFunktsionid
+    {
+        public static string juku(string nimi)
+        {
+            string otsus = "";
+            string vastus = "";
+            int anus=0;
+            string pilet=""
+            Console.WriteLine(nimi);
+            if (nimi.ToLower()=="juku")
+            {
+                Console.WriteLine("Kui vana sa oled:");
+                try
+                {
+                    vanus = int.Parse(Console.ReadLine());
+                    if (vanus>0 && vanus<100)
+                    {
+                        if (vanus<6)
+                        {
+                            pilet="Sulle on kinopilet on lsatepilet!",
+                        }
+
+                    }
+                            
+                    {
+                    else
+                    }
+                    {
+                        Console.WriteLine("vanus peab olema positivne arv ja <kui 100!");
+                catch(Exception e)
+                    }
+        //        }
+        //    }
+        //    Console.WriteLine("Kuidas on sinu vanus");
+        //    int vanus = int.Parse(Console.ReadLine());
+        //    if (vanus < 6)
+        //        Console.WriteLine("Pilet on tasuta");
+        //    else if (vanus >= 6 && vanus <= 14)
+        //        Console.WriteLine("Lastepilet");
+        //    else if (vanus >= 15 && vanus <= 65)
+        //        Console.WriteLine("täispilet");
+        //    else if (vanus >= 65);
+        //        Console.WriteLine("sooduspilet");
+        //    else
+        //        Console.WriteLine("viga andmetega");
+        //}
+        
+    }
+}
