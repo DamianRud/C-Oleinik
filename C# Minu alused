@@ -1,0 +1,171 @@
+using System;
+
+namespace Lesson1 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World! 1"); // все с новой строки
+            Console.WriteLine("Hello, World! 2");  // все с новой строки
+            Console.ReadKey(); // типо input в пайтон но только одну букву, цифру или символ, а не строку целиком
+            Console.Write("Hello, World! 3"); // все в одной строке 
+            Console.Write("Hello, World! 2"); // все в одной строке
+            Console.ReadLine(); // типо input в пайтон, но уже строку целиком, а не одну букву, цифру или символ
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace Lesson1 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = -10;// int для числа без остатка и переменная number для хранения этого числа
+            Console.WriteLine("переменная:" + number + ".");// Выводим на экран значение переменной number
+                                                            //unit только положительные числа
+            string word = "Hello";//string для текста и переменная word для хранения этого текста
+            Console.WriteLine(word);//выводим на экран значение переменной word
+
+            
+
+
+            //loat number1 = 3.14f;// float для числа с остатком и переменная number1 для хранения этого числа
+            //byte number2 = 255;// byte для числа без остатка от 0 до 255 и переменная number2 для хранения этого числа
+            //short number3 = 256;// short для числа без остатка от -32768 до 32767 и переменная number3 для хранения этого числа
+            //long number4 = 1000000000000;// long для числа без остатка от -9223372036854775808 до 9223372036854775807 и переменная number4 для хранения этого числа
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  int num1=0;// переменная с 0 int
+  int num2=0;// переменная с 0 int
+  num1 = Convert.ToInt32(Console.ReadLine());//Console.ReadLine это типо инпут как в пайтон,Convert.ToInt32() преобразует в число int
+  num2 = Convert.ToInt32(Console.ReadLine());//Console.ReadLine это типо инпут как в пайтон,Convert.ToInt32() преобразует в число int
+
+  Console.WriteLine("fisrt:"+num1+"Second:"+num2);//выводим на экран введенные числа
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Xml;
+
+namespace Lesson1 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //double user_input;//тип данных double для хранения числа но мне ну нужно так много чисел
+            //user_input = Convert.ToDouble(Console.ReadLine());
+
+
+            Console.WriteLine("введите число с точкой:");
+            float user_input;//тип данных float для хранения числа с плавающей точкой
+            user_input = float.Parse(Console.ReadLine());// float.Parse(...)преобразует эту строку в число типа float
+
+
+            float result;
+            result = user_input + 10f;
+
+            result *= 2f;
+
+            result ++;//прибовляем 1
+
+
+            //result = user_input - 15f;
+            //result = user_input * 2f;
+            //result = user_input / 5f;
+            //result = user_input % 10f;
+
+            //int a=5,b=10;
+            //int res = a % b;
+
+
+
+
+            Console.WriteLine("переменная:"+result);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Xml;
+
+namespace Lesson1 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Console.WriteLine(Math.PI);//встроеная константа число пи
+            // Console.WriteLine(Math.E);//встроеная константа число е
+            // Console.WriteLine(Math.Sqrt(2));//квадратный корень из 2
+            // Console.WriteLine(Math.Pow(2,3));//возведение в степень 2 в 3 степени
+            // Console.WriteLine(Math.Abs(-5));//модуль числа -5
+            //Console.WriteLine(Math.Ceiling(4.11f));//округляет в большую сторону 4.11 до 5
+            //Console.WriteLine(Math.Round(4.80));//обычное округление 4.80 до 5
+            // Console.WriteLine(Math.Floor(4.99f));//округляет в меньшую сторону 4.99 до 4
+            // Console.WriteLine(Math.Max(5,10));//наибольшее из чисел 5 и 10
+            // Console.WriteLine(Math.Min(5,10));//наименьшее из чисел 5 и 1 0
+            // Console.WriteLine(Math.Sign(-5));//определяет знак числа -5 возвращает -1 если число отрицательное, 0 если число равно нулю и 1 если число положительное
+
+            Console.WriteLine("Введите радиус круга:");
+            double radius = Convert.ToDouble(Console.ReadLine());// Console.ReadLine() — считывает ввод как строку,  onvert.ToDouble(...) — преобразует строку в число типа double
+            double area=Math.PI*Math.Pow(radius, 2);//значение сохраняется в переменную radius,Math.PI — число π (3.14159…),Math.Pow(radius, 2) — возводит radius в квадрат (r²) результат сохраняется в area 
+            Console.WriteLine("Площадь круга с радиусом {0} равна {1}",radius,area);//{0} → подставится radius,{1} → подставится area  
+        }
