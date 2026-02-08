@@ -1,0 +1,32 @@
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число:");
+            short user_input = Convert.ToInt16(Console.ReadLine());
+
+            switch (user_input)
+            {
+                case 5:
+                    Console.WriteLine("Номер 5");
+                    break;
+                case 15:
+                    Console.WriteLine("Номер 15");
+                    break;
+                case 20:
+                    Console.WriteLine("Номер 20");
+                    break;
+                case 250:
+                    Console.WriteLine("Номер 250");
+                    break;
+                default:
+                    Console.WriteLine("Число не соответствует ни одному кейсу");
+                    break;
+            }
+        }
+    }
+}
