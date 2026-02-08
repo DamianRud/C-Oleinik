@@ -1,0 +1,199 @@
+using System;
+using System.Globalization;
+using System.Xml;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 5;//int число
+            {
+                if (a == 5)// если число 5 то выводим
+                {
+                    Console.WriteLine("Номер 5");//выводим
+
+                }
+            }
+            {
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.ComponentModel.Design;
+using System.Globalization;
+using System.Xml;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 5; // int число
+
+            if (a == 7)
+            {
+                Console.WriteLine("Номер больше чем 7");
+              
+            }
+            else if (a < 5)
+            {
+                Console.WriteLine("Номер меньше чем 5");
+            }
+
+            else if (a == 4)
+            {
+                Console.WriteLine("Номер 4");
+            }
+
+            else if (a == 5)
+            {
+                Console.WriteLine("Номер 5");
+            }
+            else
+            {
+                Console.WriteLine("Это не номер 5");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.ComponentModel.Design;
+using System.Globalization;
+using System.Xml;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 5; // int число
+            bool isHasCar = false;
+
+            if (a == 7)
+            {
+                Console.WriteLine("Номер больше чем 7");
+
+            }
+            else if (a < 5)
+            {
+                Console.WriteLine("Номер меньше чем 5");
+            }
+
+            else if (a == 4)
+            {
+                Console.WriteLine("Номер 4");
+            }
+
+            else if (a == 5 || isHasCar)  // ||-это или, &&-это и
+            {
+                Console.WriteLine("Номер 5");
+            }
+            {
+                if (isHasCar)
+                {
+                    Console.WriteLine("У пользователя машина");
+                }
+                else
+                {
+                    Console.WriteLine("Это не номер 5");
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите роль: ");
+            string role = Console.ReadLine();
+
+            if (role == "Admin")
+            {
+                Console.Write("Введите имя пользователя: ");
+                string userName = Console.ReadLine();
+
+                Console.Write("Введите возраст пользователя {0}: ", userName);
+                short age = Convert.ToInt16(Console.ReadLine());
+
+                if (age <= 0 || age > 99)
+                {
+                    Console.Write("Введите возраст пользователя {0} ещё раз: ", userName);
+                    age = Convert.ToInt16(Console.ReadLine());
+                }
+
+                if (age <= 0 || age > 99)
+                {
+                    Console.WriteLine("Ошибка");
+                    age = 0;
+                }
+                else
+                {
+                    Console.WriteLine("Возраст пользователя: " + age);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Вы не Администратор");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
