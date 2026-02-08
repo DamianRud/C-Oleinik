@@ -1,0 +1,80 @@
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Пример обратного цикла
+            // byte i = 10;
+            // while (i >= 1)
+            // {
+            //     Console.WriteLine("Элемент: {0}", i);
+            //     i--;
+            // }
+
+            // Цикл, который выполняется, пока пользователь не введет "end"
+            //bool isTrue = true;
+
+            //while (isTrue)
+            //{
+            //    string end = Console.ReadLine();
+            //    if (end == "end")
+            //    {
+            //        isTrue = false;
+                }
+                   
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte i = 100;
+            do
+            {
+                                Console.WriteLine("Элемент:",+i);
+            } while (i <10);
+        }
+    }
+}
+
+
+
+
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (short i = 0; i < 10; i++)
+            {
+                //if (i > 5)
+                //    break;
+                if(i% 2 == 0)
+                    continue;
+
+                Console.WriteLine("Элементы: " + i);
+            }
+        }
+    }
+}
+
