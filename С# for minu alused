@@ -1,0 +1,49 @@
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (byte i = 0; i < 10; i++)//byte - тип данных для хранения чисел от 0 до 255 1 i=0 с чего начинаем i<10 до какого числа,i++ прибавляем 1
+            {
+                Console.WriteLine("Элемент: {0}", i);
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+using System;
+
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 200; i > 10; i/= 2)
+            {
+                Console.WriteLine("Элемент: {0}", i);
+
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
