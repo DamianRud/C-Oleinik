@@ -1,0 +1,429 @@
+Ülesandeid Juhu
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Tere tulemast");
+            Console.WriteLine("Palun sisesta nimi");
+            string nimi = Console.ReadLine();
+
+            if (nimi == "Juhu")
+            {
+                Console.WriteLine("Lähme kinnosse");
+            }
+            else
+            {
+                Console.WriteLine("Ma olen hõivatud");
+                return;
+            }
+
+            try
+            {
+                Console.WriteLine("Palun sisesta vanus");
+                int vanus = Convert.ToInt32(Console.ReadLine());
+
+                if (vanus < 0 || vanus > 100)
+                {
+                    Console.WriteLine("Viga: vanus peab olema vahemikus 0-100");
+                }
+                else if (vanus < 6)
+                {
+                    Console.WriteLine("Tasuta");
+                }
+                else if (vanus >= 6 && vanus <= 14)
+                {
+                    Console.WriteLine("Lapse pilet");
+                }
+                else if (vanus >= 15 && vanus <= 65)
+                {
+                    Console.WriteLine("Tavaline pilet");
+                }
+                else if (vanus > 65)
+                {
+                    Console.WriteLine("Pensionäri pilet");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: Sisesta palun number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ülesandeid naaber
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Palun sisesta esimese õpilase nimi:");
+            string nimi1 = Console.ReadLine();
+            
+            Console.WriteLine("Palun sisesta teise õpilase nimi:");
+            string nimi2 = Console.ReadLine();
+            
+            Console.WriteLine($"Tere, {nimi1} ja {nimi2}! Täna olete te pinginaabrid.");
+        }
+    }
+}
+
+
+
+
+
+ülesandeid põrand
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                
+                Console.WriteLine("Sisesta toa pikkus (meetrites):");
+                int pikkus = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Sisesta toa laius (meetrites):");
+                int laius = Convert.ToInt32(Console.ReadLine());
+
+                
+                int pindala = pikkus * laius;
+                Console.WriteLine($"Põranda pindala: {pindala} m²");
+
+                
+                Console.WriteLine("Kas soovid teha remonti? (jah/ei):");
+                string vastus = Console.ReadLine().ToLower();
+
+                if (vastus == "jah" || vastus == "yes")
+                {
+                    Console.WriteLine("Sisesta 1 m² hind (eurodes):");
+                    int hind = Convert.ToInt32(Console.ReadLine());
+
+                    int kogumaksumus = pindala * hind;
+                    Console.WriteLine($"Põranda vahetamise maksumus: {kogumaksumus} €");
+                }
+                else
+                {
+                    Console.WriteLine("Okei, remonti ei tee.");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: sisesta palun korrektne number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+ülesandeid alahindlus
+using System;
+using System.Numerics;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("Sisesta hind pärast 30% allahindlust:");
+                float allahinnaga = Convert.ToSingle(Console.ReadLine());
+
+
+                float algne = allahinnaga / 0.7f;
+
+                Console.WriteLine($"Algne hind oli: {algne:F2} €");
+                Console.WriteLine($"Allahindlus oli: {(algne - allahinnaga):F2} €");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: sisesta palun korrektne number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+Ülesandeid kraadides
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("Sisesta temperatuur (kraadides):");
+                int temperatuur = Convert.ToInt32(Console.ReadLine());
+
+                if (temperatuur > 18)
+                {
+                    Console.WriteLine($"Temperatuur {temperatuur}°C on kõrgem kui soovitatud 18°C.");
+                }
+                else if (temperatuur == 18)
+                {
+                    Console.WriteLine($"Temperatuur {temperatuur}°C on täpselt soovitatud tase.");
+                }
+                else
+                {
+                    Console.WriteLine($"Temperatuur {temperatuur}°C on madalam kui soovitatud 18°C.");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: sisesta palun korrektne number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ülesandeid pikkus
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("Sisesta oma pikkus (sentimeetrites):");
+                int pikkus = Convert.ToInt32(Console.ReadLine());
+
+                if (pikkus < 160)
+                {
+                    Console.WriteLine($"Sinu pikkus {pikkus} cm - sa oled lühike.");
+                }
+                else if (pikkus >= 160 && pikkus <= 180)
+                {
+                    Console.WriteLine($"Sinu pikkus {pikkus} cm - sa oled keskmise pikkusega.");
+                }
+                else if (pikkus > 180)
+                {
+                    Console.WriteLine($"Sinu pikkus {pikkus} cm - sa oled pikk.");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: sisesta palun korrektne number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ülesandeid pikkus M/N
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("Sisesta oma sugu (M/N):");
+                string sugu = Console.ReadLine().ToUpper();
+
+                Console.WriteLine("Sisesta oma pikkus (sentimeetrites):");
+                int pikkus = Convert.ToInt32(Console.ReadLine());
+
+                if (sugu == "M")
+                {
+                    if (pikkus < 170)
+                    {
+                        Console.WriteLine($"Meeste puhul pikkus {pikkus} cm - sa oled lühike.");
+                    }
+                    else if (pikkus >= 170 && pikkus <= 185)
+                    {
+                        Console.WriteLine($"Meeste puhul pikkus {pikkus} cm - sa oled keskmise pikkusega.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Meeste puhul pikkus {pikkus} cm - sa oled pikk.");
+                    }
+                }
+                else if (sugu == "N")
+                {
+                    if (pikkus < 160)
+                    {
+                        Console.WriteLine($"Naiste puhul pikkus {pikkus} cm - sa oled lühike.");
+                    }
+                    else if (pikkus >= 160 && pikkus <= 175)
+                    {
+                        Console.WriteLine($"Naiste puhul pikkus {pikkus} cm - sa oled keskmise pikkusega.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Naiste puhul pikkus {pikkus} cm - sa oled pikk.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Viga: sisesta M (mees) või N (naine)!");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Viga: sisesta palun korrektne number!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pood
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                float kogusumma = 0;
+
+                Console.WriteLine("Kas soovid osta piima? (jah/ei):");
+                string piim = Console.ReadLine().ToLower();
+                if (piim == "jah")
+                {
+                    float piimaHind = 1.50f;
+                    kogusumma += piimaHind;
+                    Console.WriteLine($"Piim lisatud: {piimaHind} €");
+                }
+
+
+                Console.WriteLine("Kas soovid osta saia? (jah/ei):");
+                string sai = Console.ReadLine().ToLower();
+                if (sai == "jah")
+                {
+                    float saiaHind = 0.80f;
+                    kogusumma += saiaHind;
+                    Console.WriteLine($"Sai lisatud: {saiaHind} €");
+                }
+
+            
+                Console.WriteLine("Kas soovid osta leiba? (jah/ei):");
+                string leib = Console.ReadLine().ToLower();
+                if (leib == "jah")
+                {
+                    float leibaHind = 1.20f;
+                    kogusumma += leibaHind;
+                    Console.WriteLine($"Leib lisatud: {leibaHind} €");
+                }
+
+                Console.WriteLine($"\nKokku maksta: {kogusumma:F2} €");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Viga: {ex.Message}");
+            }
+        }
+    }
+}
