@@ -1,0 +1,168 @@
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte[] nums=new byte[5];//созданый массив с 5 элементами
+            nums[0] = 250;
+            nums[1] = 50;
+            nums[2] = 20;
+            nums[3] = 100;
+            nums[4] = 25;
+            //Console.WriteLine("El:" + nums[0]);
+
+
+            string[] words = new string[] {"John","Bob","Alex"};
+
+            words[1] = "Josh";
+
+            for(byte i =0;i<nums.Length;i++)
+                Console.WriteLine("El:" + words[i]);//вывод всех элементов массива здесь можно еще nums
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            short[] numbers = new short[10];
+            short summa = 0;
+
+            for(byte i = 0; i < numbers.Length; i++)
+            {
+                Random random = new Random();//вызываем конструктор класса Random для создания объекта random
+                numbers[i] = Convert.ToInt16(random.Next(-5,15));//вызываем метод Next класса Random для генерации случайного числа от 5 до 15 и преобразуем его в тип short с помощью метода Convert.ToInt16
+                Console.WriteLine("EL:" + numbers[i]);
+                summa+= numbers[i];
+                
+                    Console.WriteLine("Summa:"+summa);
+                
+
+            }
+            {
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[,] symbols = new char[2,3];
+            symbols[0,0]= 'H';
+            Console.WriteLine(symbols[0,0];
+            int[,] nums= 
+            {
+
+            {1,2,3},
+            {4,5,6}
+            };
+
+            nums[1, 2] = 56;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+using System;
+namespace Lesson1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            short[,] nums = {
+            {4,5,7 },
+            { 8,9,10},
+            { 11,12,13},
+
+            };
+            foreach(short el in nums)
+            {
+                Console.WriteLine("El:"+el);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Создаем список и сразу добавляем в него три числа
+        List<int> numbers = new List<int>() {
+            4, 6, 7
+        };
+
+        // Добавляем дополнительные числа в список
+        numbers.Add(40);
+        numbers.Add(100);
+        numbers.Add(5);
+        numbers.Remove(100); // Удаляем число 100 из списка)
+        numbers.Reverse(); // Переворачиваем порядок элементов в списке
+
+        // Перебираем список и выводим каждое число в консоль
+        foreach (int el in numbers)
+        {
+            Console.WriteLine("El"+el);
+        }
+
+        // Чтобы консоль не закрылась сразу (необязательно)
+        Console.ReadKey();
+    }
+}
