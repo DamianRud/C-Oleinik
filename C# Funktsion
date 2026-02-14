@@ -1,0 +1,108 @@
+Funktsion
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+class Program
+{
+    static void Main()
+    {
+        //SayHello("Hello!");
+        //string word = "Hello word";
+        //SayHello(word);
+        //SayHello();
+        Summa(5, 6);
+        int a = 4, b = 7;
+        Summa(a,b);    
+    //public static void SayHello(string word)
+    //{
+    //    Console.WriteLine(word);
+    }
+
+    public static void Summa(int x, int y)
+    {
+        int result = x + y;
+        Console.WriteLine("Result"+result);
+        {
+
+        }
+    }
+}
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+class Program
+{
+    static void Main()
+    {
+        byte[] nums = { 1, 2, 3, 4, 5 };
+        byte result = Summa(nums);
+        Console.WriteLine("Result:" + result);
+    }
+
+    public static byte Summa(byte[] digits)
+    {
+        byte sum = 0;
+
+        foreach (byte el in digits)
+        {
+            sum += el;
+        }
+
+        return sum;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+class Program
+{
+    static void Main()
+    {
+        byte[] nums = { 1, 2, 3, 4, 5 };
+        byte result = Summa(nums);
+        Console.WriteLine("Result:" + result);
+
+        byte[] nums1 = { 5, 3, 8, 3, 5 };
+        byte result1 = Summa(nums1);
+        Console.WriteLine("Result:" + result1);
+    }
+
+    public static byte Summa(byte[] digits)
+    {
+        byte sum = 0;
+
+        foreach (byte el in digits)
+        {
+            sum += el;
+        }
+
+        return sum;
+    }
+}
