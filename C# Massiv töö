@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+class Program
+{
+    static void Main()
+    {
+
+
+
+        {
+
+            {
+                int[] numbrid = { 12, 56, 78, 2, 90, 43, 88, 67 };
+
+                int max = numbrid[0];
+                int maxIndex = 0;
+
+                // For – поиск наибольшего числа и его индекса
+                for (int i = 1; i < numbrid.Length; i++)
+                {
+                    if (numbrid[i] > max)
+                    {
+                        max = numbrid[i];
+                        maxIndex = i;
+                    }
+                }
+
+                Console.WriteLine($"Наибольшее число: {max}");
+                Console.WriteLine($"Индекс наибольшего числа: {maxIndex}");
+            }
+        }
+    }
+}
