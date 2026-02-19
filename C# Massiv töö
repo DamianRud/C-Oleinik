@@ -34,3 +34,81 @@ class Program
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        bool mangiUuesti = true;
+
+        while (mangiUuesti)
+        {
+            ArvaArv();
+
+            Console.WriteLine("Kas soovid uuesti mängida? (jah/ei)");
+            string vastus = Console.ReadLine().ToLower();
+
+            if (vastus != "jah")
+            {
+                mangiUuesti = false;
+            }
+        }
+    }
+
+    static void ArvaArv()
+    {
+        Random rnd = new Random();
+        int otsitavArv = rnd.Next(1, 101); // 1–100
+        int katsed = 5;
+        bool arvatiOigesti = false;
+
+        Console.WriteLine("Arva ära arv vahemikus 1–100. Sul on 5 katset!");
+
+        for (int i = 1; i <= katsed; i++)
+        {
+            Console.Write($"Katse {i}: ");
+            int kasutajaArv;
+
+            if (!int.TryParse(Console.ReadLine(), out kasutajaArv))
+            {
+                Console.WriteLine("Palun sisesta korrektne arv!");
+                i--;
+                continue;
+            }
+
+            if (kasutajaArv > otsitavArv)
+            {
+                Console.WriteLine("Liiga suur!");
+            }
+            else if (kasutajaArv < otsitavArv)
+            {
+                Console.WriteLine("Liiga väike!");
+            }
+            else
+            {
+                Console.WriteLine("Õige! Sa arvasid arvu ära!");
+                arvatiOigesti = true;
+                break;
+            }
+        }
+
+        if (!arvatiOigesti)
+        {
+            Console.WriteLine($"Mäng läbi! Õige arv oli: {otsitavArv}");
+        }
+    }
+}
